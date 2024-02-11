@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Login</title>
+
+
+  <style type="text/css">
+    body {
+     
+      color: #aa082e;
+      background-color: #b6bde7;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    .note {
+      text-align: center;
+      height: 80px;
+      background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+      color: #fff;
+      font-weight: bold;
+      line-height: 80px;
+    }
+
+    
+
+    .btnSubmit {
+      
+      
+      border: none;
+      border-radius: 1.5rem;
+      padding: 0.5%;
+      width: 7.5%;
+      cursor: pointer;
+      background: #0062cc;
+      color: #fff;
+    }
+  </style>
+
+</head>
+
+<body>
+  {% include "navbar.html" %}
+  <br>
+  <br>
+  <br><br>
+
+  <!--- login page by admin ---------->
+  <div class="note">
+    <p>Login Page</p>
+  </div>
+<br><br>
+
+<div align="center">
+
+  <form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <br>
+
+    <button type="submit" class="btnSubmit">Login</button><br><br> 
+     {{msg}}
+    
+
+  </form>
+
+</div>
+
+  <br><br><br>
+  
+
+  
+</body>
+
+</html>
